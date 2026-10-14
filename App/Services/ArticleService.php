@@ -2,11 +2,12 @@
 
 namespace App\Services;
 
+use App\Models\Article;
+
 class ArticleService
 {
-
-    public function createArticle($title, $author)
+    public function publish(Article $article)
     {
-        return new \App\Models\Article($title, $author);
+        return 'Publishing article: "' . $article->title . '" by ' . $article->author;
     }
 }
